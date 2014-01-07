@@ -364,7 +364,7 @@ a:hover {
 
 @media screen and (max-width: 62.75em) {
   .container {
-    height: 135%;
+    height: 105%;
   }
 
   .grid li {
@@ -394,8 +394,8 @@ a:hover {
   }
 
   .hero {
-    height: 40%;
-    background-size: contain;
+    height: 35%;
+    background-size: 60%;
   }
 
   .arrow {
@@ -408,6 +408,10 @@ a:hover {
 
   .page {
     font-size: 100%;
+  }
+
+  .intro-content h1 > span:first-child {
+    font-size: 2em !important;
   }
 }
 
