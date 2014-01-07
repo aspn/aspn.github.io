@@ -403,10 +403,10 @@ a:hover {
     display: none;
   }
 
-  .arrow1 {
+/*  .arrow1 {
     display: none;
   }
-
+*/
   .page {
     font-size: 100%;
   }
@@ -499,7 +499,7 @@ a:hover {
 
 @media screen and (max-width: 25em) { 
   .container {
-    height: 200%;
+    height: 210%;
   }
 
   .grid {
@@ -543,7 +543,14 @@ a:hover {
   }
 
   .container {
-    height: 230%;
+    height: 215%;
+  }
+
+}
+
+@media screen and (max-height: 480px) {
+  .container {
+    height: 240%
   }
 
 }
