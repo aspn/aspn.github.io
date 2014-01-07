@@ -1,7 +1,7 @@
-Inspiration from Codrop & Blacktie.
+Working Draft of AP Portfolio Site
 
 TO DO
+==============
 
-1. Contact Form
-2. Skills Charts
-3. Experience & Education?
+1. Load charts when in viewport
+2. SVG Education & Experience Pictures

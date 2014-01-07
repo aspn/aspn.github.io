@@ -42,7 +42,7 @@ a:hover {
   margin: 0;
   padding: 0;
   border: 0;
-  background: url(../img/fog_toronto.jpg) no-repeat center bottom;
+  background: url(../img/fog_toronto.jpg) no-repeat center top;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -69,6 +69,7 @@ a:hover {
   font-family: 'Lato', Calibri, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+  -webkit-text-fill-color: #333; 
   display: block;
   letter-spacing: 3px;
   text-align: center;
@@ -106,9 +107,31 @@ a:hover {
   font-size: 3em;
   -webkit-text-fill-color: white;
 }
+
+.arrow1 {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: #1E2F3F;
+  cursor: pointer;
+  -webkit-transition: background-color 700ms ease-out;
+}
+
+.arrow1:hover {
+  background-color: #2194D3; 
+  -webkit-transition: background-color 700ms ease-out;
+}
+
+.arrow1 i {
+  font-size: 3em;
+  -webkit-text-fill-color: white;
+}
+
 /* CONTACT INFO CONTAINER DIV */
 
 .container {
+  position: relative;
   height: 100%;
   background: #1E2F3F;
 }
@@ -145,16 +168,19 @@ a:hover {
 }
 
 .grid li:first-child p {
+  width: 12em;
   font-weight: 100;
   font-size: 1.3em;
   color: white;
   padding: 1em 1em -0.5em 1em;
+  margin: 2em auto;
   margin-bottom: 0;
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
 }
 
 .grid li:first-child a:hover .title:before {
-  margin-top: 5em;
+  margin-top: 3.5em;
 }
 
 
@@ -244,6 +270,8 @@ a:hover {
   margin: 20px 0 10px 0;
   padding: 10px 0 0 0;
   font-size: 2em;
+  font-weight: 900;
+  text-transform: capitalize;
   position: relative;
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
@@ -313,7 +341,6 @@ a:hover {
   margin-top: 70px;
 }
 
-
 .contact {
   height: 60px;
   background-color: #232323;
@@ -336,6 +363,10 @@ a:hover {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 62.75em) {
+  .container {
+    height: 135%;
+  }
+
   .grid li {
     width: 50%;
   }
@@ -363,12 +394,20 @@ a:hover {
   }
 
   .hero {
-    height: 100%;
+    height: 40%;
     background-size: contain;
   }
 
   .arrow {
     display: none;
+  }
+
+  .arrow1 {
+    display: none;
+  }
+
+  .page {
+    font-size: 100%;
   }
 }
 
@@ -411,6 +450,10 @@ a:hover {
 }
 
 @media screen and (max-width: 41.6em) { 
+  .container {
+    height: 210%;
+  }
+
   .grid li {
     width: 100%;
   }
@@ -431,16 +474,28 @@ a:hover {
     font-size: 0.9em;
     text-align: center;
   }
+  
+  .page {
+    font-size: 80%;
+  }
+
+  .hero {
+    height: 33%;
+  }
 }
 
 @media screen and (max-width: 25em) { 
+  .container {
+    height: 175%;
+  }
+
   .grid {
     font-size: 80%;
     padding-left: 0;
   }
 
   .grid li:first-child .category {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .grid h3 {
@@ -457,6 +512,19 @@ a:hover {
   }
 
   .hero {
-    background-size: cover;
+    height: 35%;
+    background-size: 95%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero {
+    height: 25%;
+    background-size: 80%;
+  }
+
+  .hero h1 {
+    font-size: 5em;
+    padding-top: 0;
   }
 }

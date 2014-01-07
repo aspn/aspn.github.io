@@ -3,65 +3,73 @@ $(document).ready(function(){
 // Scrolling
 
   $('.arrow').click( function() {
-    var target = '#container';
+    var target = ".container";
     scrollToElement(target)
-    $('.arrow a i').css("-webkit-text-fill-color", "#1E2F3F")
+  });
+
+  $('.arrow1').click( function() {
+    var target = ".split";
+    scrollToElement(target)
   });
 
 function scrollToElement(target) {
   var topoffset = -50;
   var speed = 800;
-  var destination = $('.arrow').offset().top - topoffset;
+  var destination = $(target).offset().top;
   $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
   });
   return false;
 };
+
+});
+
+$(window).ready(function(){
 
 // Charts
 
 var doughnutData = [
   {
     value: 70,
-    color:"#1abc9c"
+    color:"#4B91CD"
   },
   {
     value : 30,
     color : "#ecf0f1"
   }
 ];
-var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
+var myDoughnut = new Chart(document.getElementById("ruby").getContext("2d")).Doughnut(doughnutData);
 
 var doughnutData = [
   {
-    value: 90,
-    color:"#1abc9c"
+    value: 85,
+    color:"#4B91CD"
   },
   {
-    value : 10,
+    value : 15,
     color : "#ecf0f1"
   }
 ];
-var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
+var myDoughnut = new Chart(document.getElementById("rails").getContext("2d")).Doughnut(doughnutData);
 
 var doughnutData = [
   {
-    value: 65,
-    color:"#1abc9c"
+    value: 60,
+    color:"#4B91CD"
   },
   {
-    value : 35,
+    value : 40,
     color : "#ecf0f1"
   }
 ];
-var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
+var myDoughnut = new Chart(document.getElementById("js").getContext("2d")).Doughnut(doughnutData);
 
 var doughnutData = [
   {
-    value: 80,
-    color:"#1abc9c"
+    value: 95,
+    color:"#4B91CD"
   },
   {
-    value : 20,
+    value : 5,
     color : "#ecf0f1"
   }
 ];
@@ -70,26 +78,25 @@ var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Dou
 var doughnutData = [
   {
     value: 70,
-    color:"#1abc9c"
+    color:"#4B91CD"
   },
   {
     value : 30,
     color : "#ecf0f1"
   }
 ];
-var myDoughnut = new Chart(document.getElementById("photoshop").getContext("2d")).Doughnut(doughnutData);
+var myDoughnut = new Chart(document.getElementById("git").getContext("2d")).Doughnut(doughnutData);
 
 var doughnutData = [
   {
-    value: 50,
-    color:"#1abc9c"
+    value: 90,
+    color:"#4B91CD"
   },
   {
-    value : 50,
+    value : 10,
     color : "#ecf0f1"
-  }
+  } 
 ];
-var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
-
+var myDoughnut = new Chart(document.getElementById("adobe").getContext("2d")).Doughnut(doughnutData);
 
 });
