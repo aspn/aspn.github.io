@@ -74,6 +74,7 @@ a:hover {
   letter-spacing: 3px;
   text-align: center;
   padding: 0.4em 1em;
+  -webkit-font-smoothing: antialiased;
 }
 
 .skills {
@@ -395,7 +396,7 @@ a:hover {
 
   .hero {
     height: 35%;
-    background-size: 60%;
+    background-size: 65%;
   }
 
   .arrow {
