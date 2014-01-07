@@ -414,6 +414,11 @@ a:hover {
   .intro-content h1 > span:first-child {
     font-size: 2em !important;
   }
+
+  .hero p {
+    -webkit-text-fill-color: transparent; 
+  }
+
 }
 
 @media screen and (max-width: 55em) {
@@ -433,6 +438,10 @@ a:hover {
 
   .container > header > span {
     text-indent: 30px;
+  }
+
+  .hero p {
+    -webkit-text-fill-color: #333; 
   }
 }
 
@@ -520,6 +529,7 @@ a:hover {
     height: 35%;
     background-size: 95%;
   }
+
 }
 
 @media screen and (max-width: 320px) {
