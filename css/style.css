@@ -418,7 +418,6 @@ a:hover {
   .hero p {
     -webkit-text-fill-color: transparent; 
   }
-
 }
 
 @media screen and (max-width: 55em) {
@@ -500,7 +499,7 @@ a:hover {
 
 @media screen and (max-width: 25em) { 
   .container {
-    height: 175%;
+    height: 200%;
   }
 
   .grid {
@@ -534,7 +533,7 @@ a:hover {
 
 @media screen and (max-width: 320px) {
   .hero {
-    height: 25%;
+    height: 37%;
     background-size: 80%;
   }
 
@@ -542,4 +541,9 @@ a:hover {
     font-size: 5em;
     padding-top: 0;
   }
+
+  .container {
+    height: 230%;
+  }
+
 }
