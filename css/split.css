@@ -244,16 +244,125 @@ body {
 	padding: 2em;
 }
 
-.page-inner img {
-	float: left;
-	width: 15em;
-	margin: -5em 0em 0em 5em;
-	opacity: 0.8;
-	display: none;
+/* Inner Page Image Grids & Hovers */
+
+.page-inner .inner-grid {
+	padding: 0;
+	max-width: 1400px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.page-inner .inner-grid li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.page-inner .inner-grid figure {
+	margin: 0;
+	position: relative;
+	border-bottom: 5px solid white;
+}
+
+.page-inner .inner-grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.page-inner .inner-grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0.8em;	
+	background: #2c3f52;
+	color: white;
+	text-align: right;
+}
+
+.page-inner .inner-grid figcaption h3.inner-bottom-1 {
+	font-size: 1.05em;
+}
+
+.page-inner .inner-grid figcaption h3.inner-bottom-2 {
+	font-size: 0.95em;
+}
+
+.page-inner .inner-grid figcaption h3.inner-bottom-3 {
+	font-size: 0.85em;
+}
+
+.page-inner .inner-grid figcaption h3 {
+	text-transform: uppercase;
+	font-family: 'Futura';
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.page-inner .inner-grid figcaption p {
+	font-family: "Baskerville";
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Inner Page Image Hover Effects */
+
+.page-inner .inner-grid figure {
+	overflow: hidden;
+}
+
+.page-inner .inner-grid figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.page-inner .inner-grid figure:hover img {
+	-webkit-transform: translateY(-3em);
+	-moz-transform: translateY(-3em);
+	-ms-transform: translateY(-3em);
+	transform: translateY(-3em);
+}
+
+.page-inner .inner-grid figcaption {
+	height: 6em;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.page-inner .inner-grid figure:hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
 }
 
 .page-inner section {
-	padding: 0em 0em 2em 0em;
+	padding: 0em 0em 1em 0em;
 }
 
 .page-left .page-inner h2 {
@@ -285,7 +394,7 @@ body {
 
 .page-inner p {
 	font-weight: 100;
-	font-size: 1.2em;
+	font-size: 1.05em;
 	margin: 0.3em 0 0 0;
   -webkit-font-smoothing: antialiased;
 }
@@ -489,10 +598,11 @@ body {
 	}
 }
 
-@media screen and (max-height: 41.125em) {
-	.intro-content {
-		-webkit-transform: translateY(-25%) translateX(-50%);
-		transform: translateY(-25%) translateX(-50%);
+@media screen and (max-width: 31.5em) {
+
+	.page-inner .inner-grid li {
+		width: 100%;
+		min-width: 300px;
 	}
 }
 

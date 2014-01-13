@@ -78,13 +78,14 @@ a:hover {
 }
 
 .skills {
-  height: 140px;
+  height: 200px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .chart {
   width: 140px;
-  margin: 0 1em 0 1em;
+  margin: 2em 1em;
   float: left;
   font-size: 0.5em;
   -webkit-text-fill-color: grey;
@@ -403,10 +404,6 @@ a:hover {
     display: none;
   }
 
-/*  .arrow1 {
-    display: none;
-  }
-*/
   .page {
     font-size: 100%;
   }
@@ -529,6 +526,10 @@ a:hover {
     background-size: 95%;
   }
 
+  .skills {
+    height: 75em;
+  }
+
 }
 
 @media screen and (max-width: 320px) {
@@ -545,12 +546,10 @@ a:hover {
   .container {
     height: 230%;
   }
-
 }
 
 @media screen and (max-height: 480px) {
   .container {
     height: 250%
   }
-
 }
