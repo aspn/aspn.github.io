@@ -630,6 +630,14 @@ body {
 		width: 100%;
 		min-width: 300px;
 	}
+
+	.page-left .page-inner .inner-grid figcaption h3 {
+		font-size: 1em;
+	}
+
+	.page-right .page-inner .inner-grid figcaption {
+		height: 9em;
+	}
 }
 
 @media screen and (max-width: 320px) {
@@ -637,9 +645,5 @@ body {
 
 	.page-inner .inner-grid figure {
 		max-width: 80%;
-	}
-
-	.page-inner .inner-grid figcaption h3 {
-		font-size: 1em;
 	}
 }
