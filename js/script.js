@@ -23,12 +23,9 @@ function scrollToElement(target) {
 
 
 // Charts
-var counter = 0;
 
 function charts(e){
 
-
-  if (counter < 2) {
     var doughnutData = [
       {
         value: 70,
@@ -100,12 +97,12 @@ function charts(e){
       } 
     ];
     var myDoughnut = new Chart(document.getElementById("adobe").getContext("2d")).Doughnut(doughnutData);
-    counter++;
-  }
 }
 
 charts();
 
-$('.skills').bind('enterviewport', charts).bullseye();
+if (!Modernizr.touch){
+  $('.skills').bind('enterviewport', charts).bullseye();
+};
 
 });
