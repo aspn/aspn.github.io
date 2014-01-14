@@ -99,6 +99,8 @@ function charts(e){
   var myDoughnut = new Chart(document.getElementById("adobe").getContext("2d")).Doughnut(doughnutData);
 }
 
+charts();
+
 $('.skills')
   .bind('enterviewport', charts)
   .bullseye();
