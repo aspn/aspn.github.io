@@ -436,9 +436,6 @@ a:hover {
     text-indent: 30px;
   }
 
-  .hero p {
-    -webkit-text-fill-color: #333; 
-  }
 }
 
 @media screen and (max-height: 45em) {
@@ -491,6 +488,10 @@ a:hover {
 
   .hero {
     height: 33%;
+  }
+
+  .hero p {
+    -webkit-text-fill-color: #333; 
   }
 }
 
