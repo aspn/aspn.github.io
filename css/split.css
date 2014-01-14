@@ -299,7 +299,7 @@ body {
 
 .page-inner .inner-grid figcaption h3 {
 	text-transform: uppercase;
-	font-family: 'Futura';
+	font-family: 'Futura', 'Lato', Calibri, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 	color: #fff;
@@ -315,6 +315,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Page Right Captions & Figcaptions */
+
+.page-right .page-inner .inner-grid figure {
+	border-bottom: 5px solid #8897A1;
+}
+
+.page-inner .inner-grid figcaption a {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-weight: 500;
+	color: white;
+	text-transform: uppercase;
+	border: 2px solid white;
+	padding: 0.1em 2em;
+}
+
+.page-inner .inner-grid figcaption a:hover {
+	color: white;
+	border: 2px solid white;
+}
 
 /* Inner Page Image Hover Effects */
 
@@ -349,6 +371,11 @@ body {
 	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
 	transition: transform 0.4s, opacity 0.1s 0.3s;
 }
+
+.page-right .page-inner .inner-grid figcaption {
+	height: 7em;
+}
+
 
 .page-inner .inner-grid figure:hover figcaption {
 	opacity: 1;
@@ -431,7 +458,7 @@ body {
 
 /* Open and close */
 
-/* We need to set the position and overflow for the respective page scroll */
+/* Set position and overflow for the respective page scroll */
 .reset-layout .page,
 .splitlayout.open-right .page-left,
 .splitlayout.open-left .page-right,
@@ -599,7 +626,6 @@ body {
 }
 
 @media screen and (max-width: 31.5em) {
-
 	.page-inner .inner-grid li {
 		width: 100%;
 		min-width: 300px;
@@ -608,4 +634,12 @@ body {
 
 @media screen and (max-width: 320px) {
 	body { font-size: 70%; }
+
+	.page-inner .inner-grid figure {
+		max-width: 80%;
+	}
+
+	.page-inner .inner-grid figcaption h3 {
+		font-size: 1em;
+	}
 }

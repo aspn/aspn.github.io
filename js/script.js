@@ -24,7 +24,7 @@ function scrollToElement(target) {
 
 // Charts
 
-$('.skills').ready(function(){
+function charts(e){
 
   var doughnutData = [
     {
@@ -97,6 +97,10 @@ $('.skills').ready(function(){
     } 
   ];
   var myDoughnut = new Chart(document.getElementById("adobe").getContext("2d")).Doughnut(doughnutData);
-});
+}
+
+$('.skills')
+  .bind('enterviewport', charts)
+  .bullseye();
 
 });
