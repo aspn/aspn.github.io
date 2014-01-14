@@ -12,19 +12,18 @@ $(document).ready(function(){
     scrollToElement(target)
   });
 
-function scrollToElement(target) {
-  var topoffset = -50;
-  var speed = 800;
-  var destination = $(target).offset().top;
-  $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
-  });
-  return false;
-};
+  function scrollToElement(target) {
+    var topoffset = -50;
+    var speed = 800;
+    var destination = $(target).offset().top;
+    $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
+    });
+    return false;
+  };
 
+  // Charts
 
-// Charts
-
-function charts(e){
+  function charts(e){
 
     var doughnutData = [
       {
@@ -97,12 +96,13 @@ function charts(e){
       } 
     ];
     var myDoughnut = new Chart(document.getElementById("adobe").getContext("2d")).Doughnut(doughnutData);
-}
+  }
 
-charts();
+  charts();
 
-if (!Modernizr.touch){
-  $('.skills').bind('enterviewport', charts).bullseye();
-};
+  // Checks if touch device, Chart.js renders only once if touch device
+  if (!Modernizr.touch){
+    $('.skills').bind('enterviewport', charts).bullseye();
+  };
 
 });
