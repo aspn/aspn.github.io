@@ -394,20 +394,20 @@ body {
 
 .page-left .page-inner h2 {
 	text-transform: uppercase;
-	border-bottom: 1px solid white;
+	border-bottom: 2px solid white;
 	font-weight: 600;
 	font-size: 1em;
-	padding-bottom: 0.5em;
+	padding-bottom: 0.2em;
 	letter-spacing: 0.2em;
 	margin: 0.3em 0 1.5em 0;
 }
 
 .page-right .page-inner h2 {
 	text-transform: uppercase;
-	border-bottom: 1px solid #B0B6BA;
+	border-bottom: 2px solid #B0B6BA;
 	font-weight: 600;
 	font-size: 1em;
-	padding-bottom: 0.5em;
+	padding-bottom: 0.2em;
 	letter-spacing: 0.2em;
 	margin: 0.3em 0 1.5em 0;
 }
