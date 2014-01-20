@@ -35,7 +35,7 @@
 			};
 
 		var overlay = document.createElement('div');
-		overlay.className = 'overlay';
+		overlay.className = 'menu-overlay';
 		menu.appendChild( overlay );
 
 		trigger.addEventListener( eventtype, function( ev ) {
