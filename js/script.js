@@ -2,15 +2,55 @@ $(document).ready(function(){
 
 // Scrolling
 
-  $('.arrow').click( function() {
+  $('.arrow').click(function() {
     var target = ".container";
     scrollToElement(target)
   });
 
-  $('.arrow1').click( function() {
+  $('.arrow1').click(function() {
     var target = ".split";
     scrollToElement(target)
   });
+
+  // Menu 
+
+  $('.menu-anson').click(function() {
+    var target = ".hero";
+    scrollToElement(target)
+    $('.menu-trigger span').click();
+  });
+
+  $('.menu-contact').click(function() {
+    var target = ".container";
+    scrollToElement(target)
+    $('.menu-trigger span').click();
+  });
+
+  $('.menu-edu').click(function() {
+    var target = ".page-left";
+    scrollToElement(target)
+    $('.menu-trigger span').click();
+  });
+
+  $('.menu-exp').click(function() {
+    var target = ".split";
+    scrollToElement(target)
+    $('.menu-trigger span').click();
+  });
+
+  $('.menu-skill').click(function() {
+    var target = ".split";
+    scrollToElement(target)
+    $('.menu-trigger span').click();
+  });
+
+
+$('.menu-port').click(function() {
+    var target = ".split";
+    scrollToElement(target)
+    $('.menu-trigger span').click();
+  });
+
 
   function scrollToElement(target) {
     var topoffset = -50;
