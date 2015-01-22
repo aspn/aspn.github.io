@@ -64,19 +64,7 @@ $('.menu-port').click(function() {
   // Charts
 
   function charts(e){
-
-    var doughnutData = [
-      {
-        value: 70,
-        color:"#4B91CD"
-      },
-      {
-        value : 30,
-        color : "#ecf0f1"
-      }
-    ];
-    var myDoughnut = new Chart(document.getElementById("ruby").getContext("2d")).Doughnut(doughnutData);
-
+    
     var doughnutData = [
       {
         value: 85,
