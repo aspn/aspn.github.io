@@ -1,70 +1,51 @@
+var portfolio = (function(){
+  return {
+    menu: function(){
+      $('.menu-item').click(function(){
+        var clicked = this;
+        if ($(this).hasClass("menu-anson")){
+          portfolio.scrollToElement(true, '.hero');
+        } else if ($(this).hasClass("menu-contact")){
+          portfolio.scrollToElement(true, '.container');
+        } else if ($(this).hasClass("menu-edu")){
+          portfolio.scrollToElement(true, '.split');
+        } else if ($(this).hasClass("menu-exp")){
+          portfolio.scrollToElement(true, '.split');
+        } else if ($(this).hasClass("menu-skill")){
+          portfolio.scrollToElement(true, '.split');
+        } else if ($(this).hasClass("menu-port")){
+          portfolio.scrollToElement(true, '.split');
+        }
+      });
+    },
+    arrow: function(){
+      $('.arrow').click(function(){
+        $(this).hasClass('arrow1') ? portfolio.scrollToElement(false, '.container') : portfolio.scrollToElement(false, '.split');
+      });
+    },
+    scrollToElement: function(menu, target) {
+      if (menu) {
+        $('.menu-trigger span').click();
+      }
+      var topoffset = -50;
+      var speed = 800;
+      var destination = $(target).offset().top;
+      $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
+      });
+      return false;
+    }
+  };
+}());
+
 $(document).ready(function(){
 
-// Scrolling
-
-  $('.arrow').click(function() {
-    var target = ".container";
-    scrollToElement(target)
-  });
-
-  $('.arrow1').click(function() {
-    var target = ".split";
-    scrollToElement(target)
-  });
-
-  // Menu 
-
-  $('.menu-anson').click(function() {
-    var target = ".hero";
-    scrollToElement(target)
-    $('.menu-trigger span').click();
-  });
-
-  $('.menu-contact').click(function() {
-    var target = ".container";
-    scrollToElement(target)
-    $('.menu-trigger span').click();
-  });
-
-  $('.menu-edu').click(function() {
-    var target = ".page-left";
-    scrollToElement(target)
-    $('.menu-trigger span').click();
-  });
-
-  $('.menu-exp').click(function() {
-    var target = ".split";
-    scrollToElement(target)
-    $('.menu-trigger span').click();
-  });
-
-  $('.menu-skill').click(function() {
-    var target = ".split";
-    scrollToElement(target)
-    $('.menu-trigger span').click();
-  });
-
-
-$('.menu-port').click(function() {
-    var target = ".split";
-    scrollToElement(target)
-    $('.menu-trigger span').click();
-  });
-
-
-  function scrollToElement(target) {
-    var topoffset = -50;
-    var speed = 800;
-    var destination = $(target).offset().top;
-    $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
-    });
-    return false;
-  };
+  portfolio.menu();
+  portfolio.arrow();
 
   // Charts
 
   function charts(e){
-    
+
     var doughnutData = [
       {
         value: 85,
@@ -128,9 +109,5 @@ $('.menu-port').click(function() {
 
   charts();
 
-  // Checks if touch device, Chart.js renders only once if touch device
-  if (!Modernizr.touch){
-    $('.skills').bind('enterviewport', charts).bullseye();
-  };
 
 });
