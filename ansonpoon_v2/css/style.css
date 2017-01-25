@@ -1,0 +1,196 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+  font-family: 'disco_deckregular';
+    src: url('../fonts/discodeck/discodeck-webfont.eot');
+    src: url('../fonts/discodeck/discodeck-webfont.eot?#iefix') format('embedded-opentype'),
+   url('../fonts/discodeck/discodeck-webfont.woff') format('woff'),
+   url('../fonts/discodeck/discodeck-webfont.ttf') format('truetype'),
+   url('../fonts/discodeck/discodeck-webfont_1.svg#disco_deckregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', 'Avenir Next', sans-serif;
+	color: #fff;
+	background: #333;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Buttons */
+
+.btn {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	pointer-events: auto;
+	color: #333;
+	border: 0;
+	border-radius: 1.85em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.885em;
+	padding: 1em 2em;
+	margin: 0 auto;
+	background: rgba(251, 224, 148, 0.8);
+	-webkit-transition: background 0.3s, opacity 0.3s;
+	transition: background 0.3s, opacity 0.3s;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:hover {
+	background: rgba(251, 224, 148, 1);
+}
+
+.btn--trigger {
+	width: 15em;
+	position: absolute;
+	bottom: 2em;
+	left: 50%;
+	margin: 0 0 0 -7.5em;
+}
+
+.btn--hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Links */
+
+a {
+	text-decoration: none;
+	color: #fbe094;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #fff;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+/* Icons */
+
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+/* Content */
+
+.content {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.trigger-headline {
+	font-family: "disco_deckregular", sans-serif;
+	top: 0;
+	left: 0;
+	position: absolute;
+	font-size: 10vw;
+	text-transform: uppercase;
+	pointer-events: none;
+	line-height: 1;
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0;
+	text-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+	color: #fff;
+}
+
+.trigger-subheadline {
+	top: 1em;
+}
+
+.trigger-headline h2 {
+	margin: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.trigger-headline span, .trigger-subheadline span {
+	display: inline-block;
+	position: relative;
+	padding: 0 3.5vw;
+	-webkit-transition: opacity 2s, -webkit-transform 2s;
+	transition: opacity 2s, transform 2s;
+	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+	-webkit-transition-delay: 0.7s;
+	transition-delay: 0.7s;
+}
+
+.js .trigger-headline--hidden span {
+	pointer-events: none;
+	opacity: 0;
+}
+
+.js .trigger-headline--hidden span:nth-child(1) {
+	-webkit-transform: translate3d(-100px,0,0);
+	transform: translate3d(-100px,0,0);
+}
+
+.js .trigger-headline--hidden span:nth-child(2) {
+	-webkit-transform: translate3d(-50px,0,0);
+	transform: translate3d(-50px,0,0);
+}
+
+.js .trigger-headline--hidden span:nth-child(3) {
+	-webkit-transform: translate3d(-25px,0,0);
+	transform: translate3d(-25px,0,0);
+}
+
+.js .trigger-headline--hidden span:nth-child(4) {
+	-webkit-transform: translate3d(25px,0,0);
+	transform: translate3d(25px,0,0);
+}
+
+.js .trigger-headline--hidden span:nth-child(5) {
+	-webkit-transform: translate3d(50px,0,0);
+	transform: translate3d(50px,0,0);
+}
+
+.js .trigger-headline--hidden span:nth-child(6) {
+	-webkit-transform: translate3d(100px,0,0);
+	transform: translate3d(100px,0,0);
+}
