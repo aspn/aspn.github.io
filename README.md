@@ -1,7 +1,6 @@
-Working Draft of AP Portfolio Site
-
 TO DO
 ==============
 
-1. Load charts when in viewport
-2. SVG Education & Experience Pictures
+1. Add confetti hover to whimsy emoji
+2. Clean up CSS & JS
+3. Migrate to GatsbyJS and use CMS 

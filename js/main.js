@@ -1,12 +1,5 @@
 /**
  * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2016, Codrops
- * http://www.codrops.com
  */
 ;(function(window) {
 
@@ -23,14 +16,16 @@
 	}
 	// From https://davidwalsh.name/javascript-debounce-function.
 	function debounce(func, wait, immediate) {
-		var timeout;
+		let timeout;
 		return function() {
-			var context = this, args = arguments;
-			var later = function() {
+			const 
+				context = this,
+				args = arguments;
+			const later = function() {
 				timeout = null;
 				if (!immediate) func.apply(context, args);
 			};
-			var callNow = immediate && !timeout;
+			const callNow = immediate && !timeout;
 			clearTimeout(timeout);
 			timeout = setTimeout(later, wait);
 			if (callNow) func.apply(context, args);
@@ -103,11 +98,9 @@
 		extend(this.options, options);
 		// Preload main image.
 		var self = this;
-		imagesLoaded(this.el, { background: true }, function() {
-			self._init();
-			self._initEvents();
-			self.options.onReady();
-		});
+		self._init();
+		self._initEvents();
+		self.options.onReady();
 	}
 
 	Segmenter.prototype.options = {
@@ -433,3 +426,175 @@
 	window.Segmenter = Segmenter;
 
 })(window);
+
+// Page Transition and About Link
+
+{
+	const DOM = {};
+	DOM.intro = document.querySelector('.content--intro');
+	DOM.aboutContent = document.querySelector('.content--fixed');
+	DOM.shape = DOM.intro.querySelector('svg.shape');
+	DOM.path = DOM.shape.querySelector('path');
+	DOM.about = document.querySelector('.about');
+	DOM.back = document.querySelector('.back');
+	charming(DOM.about);
+	DOM.aboutLetters = Array.from(DOM.about.querySelectorAll('span'));
+	// Set the SVG transform origin.
+	DOM.shape.style.transformOrigin = '50% 0%';
+	const init = () => {
+		DOM.about.addEventListener('click', navigate);
+		DOM.about.addEventListener('touchenter', navigate);
+		DOM.about.addEventListener('mouseenter', enterHoverInFn);
+		DOM.about.addEventListener('mouseleave', enterHoverOutFn);
+		DOM.back.addEventListener('click', navigateBack);
+		DOM.back.addEventListener('touchenter', navigateBack);
+	};
+
+	let loaded;
+	const navigate = () => {
+		if (loaded) return;
+		loaded = true;
+
+		anime({
+			targets: DOM.intro,
+			duration: 1100,
+			easing: 'easeInOutSine',
+			translateY: '-200vh'
+		});
+
+		anime({
+			targets: DOM.shape,
+			scaleY: [{
+					value: [0.3, 1.3],
+					duration: 550,
+					easing: 'easeInQuad'
+				},
+				{
+					value: 1,
+					duration: 550,
+					easing: 'easeOutQuad'
+				}
+			]
+		});
+
+		anime({
+			targets: DOM.path,
+			duration: 1100,
+			easing: 'easeOutQuad',
+			d: DOM.path.getAttribute('pathdata:id')
+		});
+	};
+
+	const navigateBack = () => {
+		anime({
+			targets: DOM.intro,
+			duration: 1100,
+			easing: 'easeInOutSine',
+			translateY: '0'
+		});
+
+		anime({
+			targets: DOM.shape,
+			scaleY: [{
+					value: [0.3, 1.3],
+					duration: 550,
+					easing: 'easeInQuad'
+				},
+				{
+					value: 1,
+					duration: 550,
+					easing: 'easeOutQuad'
+				}
+			]
+		});
+
+		anime({
+			targets: DOM.path,
+			duration: 1100,
+			easing: 'easeOutQuad',
+			d: DOM.path.getAttribute('pathdata:id')
+		});
+		
+		loaded = false;
+	};
+
+	let isActive;
+	let enterTimeout;
+
+	const enterHoverInFn = () => enterTimeout = setTimeout(() => {
+		isActive = true;
+		anime.remove(DOM.aboutLetters);
+		anime({
+			targets: DOM.aboutLetters,
+			delay: (t, i) => i * 15,
+			translateY: [{
+					value: 10,
+					duration: 150,
+					easing: 'easeInQuad'
+				},
+				{
+					value: [-10, 0],
+					duration: 150,
+					easing: 'easeOutQuad'
+				}
+			],
+			opacity: [{
+					value: 0,
+					duration: 150,
+					easing: 'linear'
+				},
+				{
+					value: 1,
+					duration: 150,
+					easing: 'linear'
+				}
+			],
+			color: {
+				value: '#fff',
+				duration: 1,
+				delay: (t, i, l) => i * 15 + 150
+			}
+		});
+	}, 50);
+
+	const enterHoverOutFn = () => {
+		clearTimeout(enterTimeout);
+		if (!isActive) return;
+		isActive = false;
+
+		anime.remove(DOM.aboutLetters);
+		anime({
+			targets: DOM.aboutLetters,
+			delay: (t, i, l) => (l - i - 1) * 15,
+			translateY: [{
+					value: 10,
+					duration: 150,
+					easing: 'easeInQuad'
+				},
+				{
+					value: [-10, 0],
+					duration: 150,
+					easing: 'easeOutQuad'
+				}
+			],
+			opacity: [{
+					value: 0,
+					duration: 150,
+					easing: 'linear'
+				},
+				{
+					value: 1,
+					duration: 150,
+					easing: 'linear'
+				}
+			],
+			color: {
+				value: '#ffffff',
+				duration: 1,
+				delay: (t, i, l) => (l - i - 1) * 15 + 150
+			}
+		});
+	};
+
+	init();
+};
