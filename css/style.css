@@ -9,6 +9,8 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
 *,
 *::after,
 *::before {
@@ -21,7 +23,7 @@ header {
 }
 
 body {
-	font-family: 'Avenir Next', 'Roboto', sans-serif;
+	font-family: 'Avenir Next', 'Lato', 'Roboto', sans-serif;
 	background: transparent;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -113,7 +115,7 @@ a:focus {
 	transform: translateX(-50%);
 	z-index: 999;
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 500;
 	text-transform: uppercase;
     text-shadow: 3px 3px 17px rgb(0, 0, 0);
 }
@@ -355,10 +357,11 @@ a:focus {
 	width: 600px;
 	margin: 0 auto;
 	text-align: left;
+	font-size: 0.95em;
 }
 
 .text h2 {
-	font-size: 2.1em;
+	font-size: 1.6em;
 	margin: 0;
 }
 
@@ -459,7 +462,7 @@ nav a {
 	top: 50%;
 	margin: 0;
 	color: #fff;
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 16px;
 	opacity: 0;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -509,6 +512,10 @@ nav a {
 		top: 5%;
 	}
 
+	.links {
+		bottom: 12%;
+	}
+
 	.text {
 		margin-top: 300px;
 		font-size: 0.8em;
@@ -538,6 +545,11 @@ nav a {
 		width: 70px;
 		top: 6%;
 	}
+
+	.links {
+		bottom: 20%;
+	}
+
 	.me {
 		position: absolute;
 		top: 2%;
@@ -550,7 +562,7 @@ nav a {
 	.text {
 		width: 100%;
 		font-size: 0.68em;
-		margin-top: 6em;
+		margin-top: 0;
 		padding: 0 30px;
 	}
 
