@@ -140,7 +140,7 @@
 			{top: 20, left: 10, width: 30, height: 20},
 			{top: 2, left: 2, width: 40, height: 40},
 			{top: 10, left: 60, width: 30, height: 50},
-			{top: 30, left: 5, width: 50, height: 35},
+			{top: 30, left: 5, width: 60, height: 35},
 			{top: 55, left: 85, width: 10, height: 20},
 		]
 	};
