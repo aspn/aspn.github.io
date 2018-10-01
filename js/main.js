@@ -119,7 +119,7 @@
 		// Parrallax effect for the pieces.
 		parallax: true,
 		// Movements for the parallax effect.
-		parallaxMovement: {min: 10, max: 40},
+		parallaxMovement: {min: 10, max: 30},
 		// Animation for the pieces (valid properties: duration, easing, delay, opacity, translate[XYZ]).
 		animation: {
 			duration: 1500,
@@ -127,21 +127,21 @@
 			delay: 0, // Delay increment per piece.
 			// opacity: 0.5,
 			translateZ: {min: 10, max: 65}, // We can also use an integer for a specific value.
-			// translateX: {min: -100, max: 100}, // We can also use an integer for a specific value.
+			// translateX: {min: 100, max: -100}, // We can also use an integer for a specific value.
 			// translateY: {min: -100, max: 100} // We can also use an integer for a specific value.
 		},
 		// Callbacks
-		onReady: function() { return false; },
-		onAnimationComplete: function() { return false; },
-		onAnimationStart: function() { return false; },
+		onReady: () => { return false; },
+		onAnimationComplete: () => { return false; },
+		onAnimationStart: () => { return false; },
 		// The positions of the pieces in percentage values. 
 		// We can also use random values by setting options.positions to "random".
 		positions: [
-			{top: 80, left: 10, width: 30, height: 20},
+			{top: 20, left: 10, width: 30, height: 20},
 			{top: 2, left: 2, width: 40, height: 40},
 			{top: 10, left: 60, width: 30, height: 50},
-			{top: 30, left: 20, width: 50, height: 60},
-			{top: 55, left: 85, width: 10, height: 20}
+			{top: 30, left: 5, width: 50, height: 35},
+			{top: 55, left: 85, width: 10, height: 20},
 		]
 	};
 
