@@ -510,6 +510,9 @@ nav a {
 	.me {
 		position: absolute;
 		top: 5%;
+		width: 200px;
+		height: 200px;
+		border: 5px solid white;
 	}
 
 	.links {
@@ -517,37 +520,70 @@ nav a {
 	}
 
 	.text {
-		margin-top: 300px;
+		margin-top: 200px;
 		font-size: 0.8em;
+		width: 100%;
+		padding: 0 35px;
 	}
 }
 
-@media (max-width: 700px) {
+/* Portrait iPad */
+@media only screen 
+	and (min-device-width: 768px) 
+	and (max-device-width: 1024px) 
+	and (orientation: portrait) 
+	and (-webkit-min-device-pixel-ratio: 2) {
+	.nav-fillpath a {
+		top: 5%;
+		left: 2%;
+		height: 70px;
+		width: 70px;
+	}
+
 	.me {
 		position: absolute;
-		top: 5%;
-		right: 5%;
-		height: 200px;
-		width: 200px;
-		border: 5px solid white;
+		top: 3%;
+		right: 10%;
+		height: 150px;
+		width: 150px;
+		border: 3px solid white;
 	}
 
 	.text {
-		margin-top: 10em;
-		font-size: 0.8em;
-		width: 80%;
+		width: 100%;
+		font-size: 2.5vw;
+		padding: 0 50px;
+		margin-top: 10vw;
+	}
+
+	.text h2,
+	.hi-emoji {
+		font-size: 3vw;
+	}
+
+	.hi-emoji {
+		margin-top: 0.2em;
+		text-align: center;
 	}
 }
 
-@media (max-width: 550px) {
-	.nav-fillpath a {
-		height: 70px;
-		width: 70px;
-		top: 6%;
-	}
+/* iPhone 6 series */
 
+/* Portrait */
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2) 
+	and (orientation: portrait) {
 	.links {
 		bottom: 18%;
+	}
+
+	.nav-fillpath a {
+		top: 6%;
+		left: 2%;
+		height: 70px;
+		width: 70px;
 	}
 
 	.me {
@@ -560,185 +596,165 @@ nav a {
 	}
 
 	.text {
-		width: 100%;
-		font-size: 0.68em;
 		margin-top: 0;
-		padding: 0 30px;
-	}
-
-	.text h2 {
-		font-size: 1.5em;
-	}
-}
-
-@media (max-width: 320px) {
-	.text {
 		width: 100%;
-		font-size: 0.58em;
-		margin-top: 100px;
-		padding: 0 30px;
+		font-size: 1.5vh;
+		padding: 0 35px;
 	}
 
-	.text h2 {
-		font-size: 1.5em;
-	}
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-	.nav-fillpath a {
-		height: 70px;
-		width: 70px;
-	}
-
-	.me {
-		position: absolute;
-		top: 5%;
-		right: 10%;
-		height: 70px;
-		width: 70px;
-		border: 3px solid white;
+	.text h2,
+	.hi-emoji {
+		font-size: 2vh;
 	}
 
 	.hi-emoji {
 		margin-top: 0.2em;
-		font-size: 1.3em;
 		text-align: center;
-	}
-
-	.text {
-		width: 100%;
-		font-size: 0.6em;
-		margin-top: 4em;
-		padding: 0 70px;
-	}
-
-	.text h2 {
-		font-size: 1.4em;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	.nav-fillpath a {
-		height: 70px;
-		width: 70px;
-	}
-
-	.me {
-		position: absolute;
-		top: 5%;
-		right: 10%;
-		height: 70px;
-		width: 70px;
-		border: 3px solid white;
-	}
-
-	.hi-emoji {
-		margin-top: 0.2em;
-		font-size: 1.3em;
-		text-align: center;
-	}
-
-	.text {
-		width: 100%;
-		font-size: 0.6em;
-		margin-top: 4em;
-		padding: 0 70px;
-	}
-
-	.text h2 {
-		font-size: 1.4em;
-	}
-}
-
-/* Landscape iPhone 5 series */
-@media only screen 
-	and (min-device-width: 320px) 
-	and (max-device-width: 568px) 
-	and (-webkit-min-device-pixel-ratio: 2) 
-	and (orientation: landscape) {
-	.nav-fillpath a {
-		height: 70px;
-		width: 70px;
-		top: 15%
-	}
-
-	.me {
-		position: absolute;
-		top: 5%;
-		right: 3%;
-		height: 70px;
-		width: 70px;
-		border: 3px solid white;
-	}
-
-	.hi-emoji {
-		margin-top: 0;
-		text-align: center;
-		font-size: 1.2em;
-	}
-
-	.text {
-		width: 100%;
-		font-size: 0.4em;
-		margin-top: 5em;
-		padding: 0 30px;
-	}
-
-	.text h2 {
-		font-size: 1.2em;
-		text-align: center;
-	}
-
-	.text p {
-		margin: 0.7em;
-	}
-}
-
-/* Landscape iPhone 6 series */
+/* Landscape */
 @media only screen 
 	and (min-device-width: 375px) 
 	and (max-device-width: 667px) 
 	and (-webkit-min-device-pixel-ratio: 2) 
 	and (orientation: landscape) {
 	.nav-fillpath a {
+		top: 15%;
+		left: 2%;
 		height: 70px;
 		width: 70px;
 	}
 
 	.me {
 		position: absolute;
-		top: 5%;
-		right: 3%;
+		top: 7%;
+		right: 7%;
+		height: 50px;
+		width: 50px;
+		border: 2px solid white;
+	}
+
+	.text {
+		margin-top: 0;
+		width: 100%;
+		font-size: 1.5vw;
+		padding: 0 50px;
+	}
+
+	.text h2,
+	.hi-emoji {
+		font-size: 1.7vw;
+		text-align: center;
+	}
+
+	.hi-emoji {
+		margin-top: 0.2em;
+	}
+}
+
+/* iPhone 5 */
+
+/* Portrait */
+@media only screen 
+	and (min-device-width: 320px) 
+	and (max-device-width: 568px) 
+	and (-webkit-min-device-pixel-ratio: 2) 
+	and (orientation: portrait) {
+	.nav-fillpath a {
+		top: 6%;
+		left: 2%;
+		height: 50px;
+		width: 50px;
+	}
+
+	.me {
+		position: absolute;
+		top: 2%;
+		right: 10%;
+		height: 50px;
+		width: 50px;
+		border: 2px solid white;
+	}
+
+	.text {
+		margin-top: 0;
+		width: 100%;
+		font-size: 1.67vh;
+		padding: 0 35px;
+	}
+
+	.text h2,
+	.hi-emoji {
+		font-size: 2vh;
+	}
+
+	.hi-emoji {
+		margin-top: 0.2em;
+		text-align: center;
+	}
+}
+
+/* Landscape Android Phones */
+@media screen 
+	and (max-device-width: 850px)
+	and (orientation: landscape) {
+	.nav-fillpath a {
+		top: 15%;
+		left: 2%;
+		height: 70px;
+		width: 70px;
+	}
+
+	.me {
+		position: absolute;
+		top: 7%;
+		right: 7%;
 		height: 70px;
 		width: 70px;
 		border: 3px solid white;
 	}
 
 	.text {
+		margin-top: 0;
 		width: 100%;
-		font-size: 0.59em;
-		margin-top: 5em;
-		padding: 0 30px;
+		font-size: 1.5vw;
+		padding: 0 50px;
 	}
 
-	.text h2 {
-		font-size: 1.2em;
+	.text h2,
+	.hi-emoji {
+		font-size: 1.7vw;
+		text-align: center;
+	}
+
+	.hi-emoji {
+		margin-top: 0.2em;
 	}
 }
 
+/* iPhone X & Plus */
 
-/* Landscape iPhone Plus */
-@media only screen and (min-device-width: 414px) 
-	and (max-device-width: 736px) 
+/* Portrait */
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 812px) 
 	and (-webkit-min-device-pixel-ratio: 3) 
-	and (orientation: landscape) {
-	.nav-fillpath a {
-		height: 70px;
-		width: 70px;
+	and (orientation: portrait) {
+	.links {
+		bottom: 18%;
 	}
+
+	.nav-fillpath a {
+		top: 5%;
+		left: 2%;
+		height: 50px;
+		width: 50px;
+	}
+
 	.me {
 		position: absolute;
-		top: 5%;
+		top: 2%;
 		right: 10%;
 		height: 70px;
 		width: 70px;
@@ -746,87 +762,59 @@ nav a {
 	}
 
 	.text {
+		margin-top: 0;
 		width: 100%;
-		font-size: 0.6em;
-		margin-top: 5em;
-		padding: 0 30px;
+		font-size: 1.6vh;
+		padding: 0 35px;
 	}
 
-	.text h2 {
-		font-size: 1.5em;
+	.text h2,
+	.hi-emoji {
+		font-size: 2vh;
+	}
+
+	.hi-emoji {
+		margin-top: 0.2em;
+		text-align: center;
 	}
 }
 
-/* Landscape iPhone X */
-@media only screen and (min-device-width: 375px) 
+/* Landscape */
+@media only screen 
+	and (min-device-width: 375px) 
 	and (max-device-width: 812px) 
 	and (-webkit-min-device-pixel-ratio: 3) 
 	and (orientation: landscape) {
 	.nav-fillpath a {
+		top: 15%;
+		left: 2%;
 		height: 70px;
 		width: 70px;
 	}
 
 	.me {
 		position: absolute;
-		top: 5%;
-		right: 10%;
+		top: 7%;
+		right: 7%;
 		height: 70px;
 		width: 70px;
 		border: 3px solid white;
 	}
 
-	.hi-emoji {
-		margin-top: 0.2em;
-		font-size: 1.3em;
-		text-align: center;
-	}
-
 	.text {
+		margin-top: 0;
 		width: 100%;
-		font-size: 0.6em;
-		margin-top: 4em;
-		padding: 0 70px;
+		font-size: 1.4vw;
+		padding: 0 50px;
 	}
 
-	.text h2 {
-		font-size: 1.4em;
-	}
-}
-
-@media only screen 
-	and (min-device-width: 768px) 
-	and (max-device-width: 1024px) 
-	and (orientation: landscape) 
-	and (-webkit-min-device-pixel-ratio: 2) {
-	.nav-fillpath a {
-		height: 70px;
-		width: 70px;
-	}
-
-	.me {
-		position: absolute;
-		top: 5%;
-		right: 10%;
-		height: 100px;
-		width: 100px;
-		border: 3px solid white;
+	.text h2,
+	.hi-emoji {
+		font-size: 1.7vw;
+		text-align: center;
 	}
 
 	.hi-emoji {
 		margin-top: 0.2em;
-		font-size: 1em;
-		text-align: center;
-	}
-
-	.text {
-		width: 100%;
-		font-size: 0.7em;
-		margin-top: 4em;
-		padding: 0 70px;
-	}
-
-	.text h2 {
-		font-size: 1em;
 	}
 }
