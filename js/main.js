@@ -137,10 +137,10 @@
 		// The positions of the pieces in percentage values. 
 		// We can also use random values by setting options.positions to "random".
 		positions: [
-			{top: 20, left: 10, width: 30, height: 20},
-			{top: 2, left: 2, width: 40, height: 40},
+			{top: 20, left: 50, width: 30, height: 20},
+			{top: 2, left: 2, width: 30, height: 75},
 			{top: 10, left: 60, width: 30, height: 50},
-			{top: 30, left: 5, width: 60, height: 35},
+			{top: 30, left: 5, width: 70, height: 40},
 			{top: 55, left: 85, width: 10, height: 20},
 		]
 	};
