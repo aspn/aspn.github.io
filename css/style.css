@@ -504,6 +504,17 @@ nav a {
 	transform: translateY(-50%) translateX(0);
 }
 
+/* Fireworks */
+
+.fireworks {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /* Media Queries */
 
 @media (max-width: 1000px) {
