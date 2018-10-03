@@ -358,6 +358,7 @@ a:focus {
 	margin: 0 auto;
 	text-align: left;
 	font-size: 0.95em;
+	z-index: 1000;
 }
 
 .text h2 {
