@@ -20,7 +20,7 @@
     "utils": "^0.3.1",
     "glsl-noise": "^0.0.0",
     "glsl-rotate": "^1.1.0",
-    "three": "^0.123.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "glslify-bundle": "^5.1.1",
